@@ -12,7 +12,9 @@
                 -a function that modifies the value in a template variable -->
                 <p>{{ entry.date_added }} </p>
                 <p>{{ entry.text }} </p>
-        
+                <p>
+                    <a href = "{% url 'learning_logs:edit_entry' entry.id %}">Edit entry</a>
+                </p>
         </li>
 
         {% empty %} <!-- if the list is empty then display message-->
