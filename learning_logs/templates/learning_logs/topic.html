@@ -15,18 +15,13 @@
         
         </li>
 
-        <li>
-            <a href = "{% url 'learning_logs: topic' topic.id %}">{{ topic }}</a>
-        </li>
         {% empty %} <!-- if the list is empty then display message-->
          <li>There are no entries for this topic yet.</li>
         {% endfor %}
     </ul>
 
-    <a href="{% url 'learning_logs:new_topic' %}">Add a new topic</a>
-
     <p>
-        <a href ="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a>
+        <a href="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a>
     </p>
 
-    {% endblock content %}
+{% endblock content %}
